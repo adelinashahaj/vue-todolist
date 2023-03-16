@@ -17,7 +17,7 @@ createApp({
         },
         {
             text: 'Pulire la casa',
-            done: true
+            done: false
         }
        
       ]
@@ -25,7 +25,7 @@ createApp({
    
   },
   methods: {
-    remuveTask(index){
+    removeTask(index){
         this.tasklist.splice(index, 1);
     },
     addTask(){
@@ -35,6 +35,14 @@ createApp({
         }
          this.tasklist.unshift(newelemetTask);
          this.newtask = '';
+    },
+    toggle(index) {
+        console.log(index);
+       this.tasklist[index].done = true;
+     
+        
     }
+    
 }
+
 }).mount('#app')

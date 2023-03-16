@@ -30,8 +30,8 @@
             <ul v-if="tasklist.length > 0">
                 <li v-for="(task, index) in tasklist">
                     <span class="tast-text"
-                    :class="task.done=='true'?'tx-decor':''">{{task.text}}</span>
-                    <i @click="remuveTask(index)" class="fa-solid fa-xmark"></i>
+                    :class="task.done==true?'tx-decor':''" >{{task.text}}</span>
+                    <i @click="removeTask(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
             <h3 v-else>sei libero!</h3>
