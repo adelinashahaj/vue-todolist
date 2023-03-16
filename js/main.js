@@ -22,5 +22,13 @@ createApp({
        
       ]
     }
-  }
+   
+  },
+  methods: {
+    remuveTask(index){
+        this.tasklist.splice(index, 1);
+
+
+    }
+}
 }).mount('#app')
