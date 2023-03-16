@@ -27,14 +27,15 @@
         </div>
 
         <div class="task-List">
-            <ul>
-                <li>
-                    <span class="tast-text">qualcosa</span>
+            <ul v-if="tasklist.length > 0">
+                <li v-for="task in tasklist">
+                    <span class="tast-text">{{task.text}}</span>
                     <i class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
-
+            <h3 v-else>sei libero!</h3>
         </div>
+        
 
     </main>
     
