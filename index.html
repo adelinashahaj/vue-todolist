@@ -21,7 +21,7 @@
     <main class="container">
 
         <div class="new-Task text-center">
-            <input type="text" placeholder="add new task" v-model="newtask">
+            <input type="text" placeholder="add new task" v-model="newtask" @keyup.enter="addTask">
             <button @click="addTask">Aggunggi</button>
 
         </div>
