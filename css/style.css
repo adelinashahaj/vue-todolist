@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+.text-center{
+    text-align: center;
+}
+.new-Task input{
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+.new-Task button{
+    padding: 10px;
+    border-radius: 5px;
+}
+.task-List{
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.task-List li{
+    padding: 10px 0px;
+    border-bottom: 1px solid #777;
+    display: flex;
+}
+.tast-text{
+    flex-grow: 1;
+}
+
+
