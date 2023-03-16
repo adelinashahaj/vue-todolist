@@ -30,7 +30,7 @@
             <ul v-if="tasklist.length > 0">
                 <li v-for="(task, index) in tasklist">
                     <span class="tast-text"
-                    :class="task.done==true?'tx-decor':''" >{{task.text}}</span>
+                    :class="task.done==true?'tx-decor':''" @click="toggle(index)">{{task.text}}</span>
                     <i @click="removeTask(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
