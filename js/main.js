@@ -5,19 +5,19 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        
+        newtask: '',
       tasklist: [
         {
-            text: 'erert',
+            text: 'Compiti',
             done: false
         },
         {
-            text: 'rrtr',
+            text: 'La spesa',
             done: false
         },
         {
-            text: 'rrthzth',
-            done: false
+            text: 'Pulire la casa',
+            done: true
         }
        
       ]
@@ -27,8 +27,14 @@ createApp({
   methods: {
     remuveTask(index){
         this.tasklist.splice(index, 1);
-
-
+    },
+    addTask(){
+        let newelemetTask =   {
+            text: this.newtask,
+            done: true
+        }
+         this.tasklist.unshift(newelemetTask);
+         this.newtask = '';
     }
 }
 }).mount('#app')

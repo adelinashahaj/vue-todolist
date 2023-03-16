@@ -33,6 +33,10 @@
 }
 .tast-text{
     flex-grow: 1;
+   
+}
+.tx-decor{
+    text-decoration-line: line-through;
 }
 
 

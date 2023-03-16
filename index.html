@@ -21,15 +21,16 @@
     <main class="container">
 
         <div class="new-Task text-center">
-            <input type="text" placeholder="add new task">
-            <button>aggunggi</button>
+            <input type="text" placeholder="add new task" v-model="newtask">
+            <button @click="addTask">Aggunggi</button>
 
         </div>
 
         <div class="task-List">
             <ul v-if="tasklist.length > 0">
                 <li v-for="(task, index) in tasklist">
-                    <span class="tast-text">{{task.text}}</span>
+                    <span class="tast-text"
+                    :class="task.done=='true'?'tx-decor':''">{{task.text}}</span>
                     <i @click="remuveTask(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
