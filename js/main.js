@@ -36,11 +36,15 @@ createApp({
          this.tasklist.unshift(newelemetTask);
          this.newtask = '';
     },
-    toggle(index) {
-        console.log(index);
-       this.tasklist[index].done = true;
-     
-        
+    toggle(indice) {
+        console.log(indice);
+      
+     if(!this.tasklist[indice].done == true ){
+        this.tasklist[indice].done = true;
+     } else {
+        this.tasklist[indice].done = false;
+    }
+    
     }
     
 }
